@@ -2,6 +2,27 @@ const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-button");
 const navItems = [...document.querySelectorAll(".nav-item")];
 const navTriggers = [...document.querySelectorAll(".nav-trigger")];
+const hero = document.querySelector(".hero");
+const heroVideo = document.querySelector(".hero-video");
+
+const resizeHeroVideo = () => {
+  if (!hero || !heroVideo) return;
+
+  const rect = hero.getBoundingClientRect();
+  const videoRatio = heroVideo.videoWidth && heroVideo.videoHeight
+    ? heroVideo.videoWidth / heroVideo.videoHeight
+    : 16 / 9;
+  const heroRatio = rect.width / rect.height;
+  const height = heroRatio > videoRatio ? rect.width / videoRatio : rect.height;
+  const width = height * videoRatio;
+
+  heroVideo.style.setProperty("--hero-video-width", `${width}px`);
+  heroVideo.style.setProperty("--hero-video-height", `${height}px`);
+};
+
+heroVideo?.addEventListener("loadedmetadata", resizeHeroVideo);
+window.addEventListener("resize", resizeHeroVideo);
+resizeHeroVideo();
 
 const closeNav = () => {
   navItems.forEach((item) => item.classList.remove("is-open"));
