@@ -12,6 +12,31 @@
   --max: 1320px;
   --nav-height: clamp(48px, 4.1667vw, 80px);
   --page-x: clamp(24px, 4.1667vw, 80px);
+  --text-11: clamp(9px, 0.5729vw, 11px);
+  --text-12: clamp(10px, 0.625vw, 12px);
+  --text-13: clamp(11px, 0.6771vw, 13px);
+  --text-14: clamp(12px, 0.7292vw, 14px);
+  --text-16: clamp(13px, 0.8333vw, 16px);
+  --text-18: clamp(15px, 0.9375vw, 18px);
+  --text-20: clamp(16px, 1.0417vw, 20px);
+  --text-24: clamp(19px, 1.25vw, 24px);
+  --text-32: clamp(18px, 1.6667vw, 32px);
+  --text-58: clamp(38px, 3.0208vw, 58px);
+  --text-64: clamp(42px, 3.3333vw, 64px);
+  --text-72: clamp(42px, 3.75vw, 72px);
+  --lh-15: clamp(13px, 0.7813vw, 15px);
+  --lh-16: clamp(14px, 0.8333vw, 16px);
+  --lh-17: clamp(14px, 0.8854vw, 17px);
+  --lh-18: clamp(15px, 0.9375vw, 18px);
+  --lh-20: clamp(16px, 1.0417vw, 20px);
+  --lh-22: clamp(18px, 1.1458vw, 22px);
+  --lh-26: clamp(20px, 1.3542vw, 26px);
+  --lh-28: clamp(22px, 1.4583vw, 28px);
+  --lh-29: clamp(23px, 1.5104vw, 29px);
+  --lh-45: clamp(28px, 2.3438vw, 45px);
+  --lh-68: clamp(44px, 3.5417vw, 68px);
+  --lh-75: clamp(48px, 3.9063vw, 75px);
+  --lh-84: clamp(49px, 4.375vw, 84px);
   font-family: "Roboto", Arial, sans-serif;
   color: var(--ink);
 }
@@ -95,9 +120,9 @@ video {
   align-items: center;
   gap: clamp(19px, 2.25vw, 43px);
   color: #111827;
-  font-size: clamp(10px, 0.68vw, 13px);
-  line-height: 1.2;
-  font-weight: 700;
+  font-size: var(--text-13);
+  line-height: var(--lh-16);
+  font-weight: 500;
 }
 
 .nav-item {
@@ -106,7 +131,12 @@ video {
 
 .site-nav a,
 .nav-trigger {
-  padding: calc((var(--nav-height) - 18px) / 2) 0;
+  margin: 0 -10px;
+  padding: calc((var(--nav-height) - 28px) / 2) 10px;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .nav-trigger {
@@ -166,20 +196,28 @@ video {
   padding: 11px 13px;
   border-radius: 9px;
   color: #172033;
-  font-size: 13px;
-  line-height: 1.25;
+  font-size: var(--text-13);
+  line-height: var(--lh-18);
+  font-weight: 400;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .nav-panel a:hover,
 .nav-panel a:focus-visible {
-  background: #f1f5ff;
-  color: var(--blue);
+  background: rgba(8, 87, 255, 0.07);
+  color: #111827;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .nav-trigger:hover,
-.nav-trigger:focus-visible,
+.nav-trigger:focus-visible {
+  background: rgba(8, 87, 255, 0.07);
+  color: #111827;
+}
+
 .nav-link.is-active,
 .nav-trigger.is-active {
   color: var(--blue);
@@ -195,9 +233,11 @@ video {
 .outline-button,
 .store-badge {
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    background 180ms ease;
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .header-cta {
@@ -209,7 +249,8 @@ video {
   border-radius: 999px;
   background: var(--blue);
   color: var(--white);
-  font-size: clamp(10px, 0.68vw, 13px);
+  font-size: var(--text-13);
+  line-height: var(--lh-16);
   font-weight: 700;
   box-shadow: 0 12px 26px rgba(8, 87, 255, 0.22);
 }
@@ -269,25 +310,26 @@ video {
 
 .hero-copy {
   margin: 0 0 clamp(18px, 1.25vw, 24px);
-  font-size: clamp(15px, 1.04vw, 20px);
-  line-height: 1.38;
-  font-weight: 500;
+  font-size: var(--text-20);
+  line-height: var(--lh-28);
+  font-weight: 400;
 }
 
 .text-link {
   display: inline-flex;
   margin-bottom: clamp(16px, 1.05vw, 20px);
   color: currentColor;
-  font-size: clamp(15px, 0.94vw, 18px);
-  font-weight: 500;
+  font-size: var(--text-18);
+  line-height: var(--lh-22);
+  font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 5px;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(38px, 3.02vw, 58px);
-  line-height: 0.95;
+  font-size: var(--text-58);
+  line-height: var(--lh-68);
   letter-spacing: 0;
   font-weight: 900;
 }
@@ -364,8 +406,8 @@ video {
 .section-heading h2,
 .faq h2 {
   margin: 0 0 clamp(18px, 1.25vw, 24px);
-  font-size: clamp(42px, 3.75vw, 72px);
-  line-height: 1.1667;
+  font-size: var(--text-72);
+  line-height: var(--lh-84);
   letter-spacing: 0;
   font-weight: 900;
 }
@@ -373,8 +415,8 @@ video {
 .section-heading p {
   margin: 0;
   color: var(--muted);
-  font-size: clamp(12px, 0.833vw, 16px);
-  line-height: 1.45;
+  font-size: var(--text-16);
+  line-height: var(--lh-22);
   font-weight: 400;
 }
 
@@ -413,15 +455,16 @@ video {
   display: block;
   margin-bottom: 3px;
   color: #6f7787;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: var(--text-12);
+  line-height: var(--lh-15);
+  font-weight: 500;
 }
 
 .info-item strong {
   display: block;
   color: #111827;
-  font-size: 12px;
-  line-height: 1.28;
+  font-size: var(--text-12);
+  line-height: var(--lh-15);
   font-weight: 700;
   overflow-wrap: anywhere;
 }
@@ -454,15 +497,16 @@ video {
 
 .service-grid h3 {
   margin: 0 0 clamp(7px, 0.52vw, 10px);
-  font-size: clamp(14px, 0.9375vw, 18px);
-  line-height: 1.2;
+  font-size: var(--text-18);
+  line-height: var(--lh-22);
+  font-weight: 700;
 }
 
 .service-grid p {
   margin: 0;
   color: #4f596b;
-  font-size: clamp(11px, 0.73vw, 14px);
-  line-height: 1.45;
+  font-size: var(--text-14);
+  line-height: var(--lh-20);
   font-weight: 400;
 }
 
@@ -476,8 +520,16 @@ video {
   border-radius: 999px;
   color: var(--blue);
   background: rgba(255, 255, 255, 0.58);
-  font-size: 12px;
+  font-size: var(--text-12);
+  line-height: var(--lh-15);
   font-weight: 700;
+}
+
+.outline-button:hover,
+.outline-button:focus-visible {
+  border-color: var(--blue);
+  background: rgba(8, 87, 255, 0.07);
+  box-shadow: 0 10px 28px rgba(8, 87, 255, 0.12);
 }
 
 .outline-button::after {
@@ -552,17 +604,18 @@ video {
 .official-card h2 {
   width: min(1580px, 100%);
   margin: 0 0 clamp(18px, 1.25vw, 24px);
-  font-size: clamp(42px, 3.75vw, 72px);
-  line-height: 1.1667;
+  font-size: var(--text-72);
+  line-height: var(--lh-84);
   font-weight: 900;
 }
 
 .official-card p {
   width: min(1740px, 100%);
   margin: 0;
-  font-size: clamp(18px, 1.6667vw, 32px);
-  line-height: 1.4;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--text-32);
+  line-height: var(--lh-45);
+  font-weight: 400;
 }
 
 .proof-grid {
@@ -584,22 +637,23 @@ video {
 
 .proof-grid span {
   color: var(--blue);
-  font-size: clamp(42px, 3.3vw, 64px);
-  line-height: 1;
+  font-size: var(--text-64);
+  line-height: var(--lh-75);
   font-weight: 700;
 }
 
 .proof-grid h3 {
   margin: 0 0 10px;
-  font-size: clamp(19px, 1.25vw, 24px);
-  line-height: 1.18;
+  font-size: var(--text-24);
+  line-height: var(--lh-29);
+  font-weight: 700;
 }
 
 .proof-grid p {
   margin: 0;
   color: #5e6878;
-  font-size: clamp(14px, 0.94vw, 18px);
-  line-height: 1.45;
+  font-size: var(--text-18);
+  line-height: var(--lh-26);
   font-weight: 400;
 }
 
@@ -628,8 +682,18 @@ video {
   list-style: none;
   padding: clamp(18px, 1.35vw, 26px) clamp(22px, 1.6667vw, 32px);
   color: #111827;
-  font-size: clamp(13px, 0.833vw, 16px);
+  font-size: var(--text-16);
+  line-height: var(--lh-20);
   font-weight: 700;
+  border-radius: inherit;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.faq summary:hover,
+.faq summary:focus-visible {
+  background: rgba(8, 87, 255, 0.045);
 }
 
 .faq summary::-webkit-details-marker {
@@ -655,8 +719,8 @@ video {
 .faq details p {
   margin: -8px 32px 26px;
   color: #4f596b;
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: var(--text-13);
+  line-height: var(--lh-20);
   font-weight: 400;
 }
 
@@ -671,7 +735,7 @@ video {
 
 .footer-top {
   display: grid;
-  grid-template-columns: minmax(360px, 560px) repeat(3, minmax(130px, 174px));
+  grid-template-columns: minmax(320px, 480px) repeat(3, 150px);
   justify-content: space-between;
   gap: clamp(42px, 5vw, 96px);
   width: 100%;
@@ -693,8 +757,8 @@ video {
   width: min(430px, 100%);
   margin: clamp(22px, 1.45vw, 28px) 0 clamp(22px, 1.35vw, 26px);
   color: rgba(255, 255, 255, 0.74);
-  font-size: clamp(12px, 0.68vw, 13px);
-  line-height: 1.58;
+  font-size: var(--text-13);
+  line-height: var(--lh-20);
 }
 
 .socials {
@@ -706,6 +770,15 @@ video {
   width: clamp(82px, 5.1vw, 98px);
   height: auto;
   object-fit: contain;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.socials:hover img,
+.socials:focus-within img {
+  filter: brightness(1.08);
+  opacity: 0.94;
 }
 
 .footer nav {
@@ -717,19 +790,33 @@ video {
 .footer h3 {
   margin: 0 0 clamp(10px, 0.72vw, 14px);
   color: rgba(255, 255, 255, 0.96);
-  font-size: clamp(12px, 0.73vw, 14px);
+  font-size: var(--text-14);
+  line-height: var(--lh-17);
   font-weight: 700;
 }
 
 .footer nav a {
   color: rgba(255, 255, 255, 0.64);
-  font-size: clamp(11px, 0.68vw, 13px);
-  line-height: 1.25;
+  font-size: var(--text-13);
+  line-height: var(--lh-16);
   font-weight: 400;
+  width: fit-content;
+  margin: -4px -6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.footer nav a:hover,
+.footer nav a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.96);
 }
 
 .footer-divider {
-  width: min(980px, 51vw);
+  width: min(1280px, 76vw);
   height: 1px;
   margin: clamp(58px, 4.3vw, 82px) auto 0;
   background: rgba(255, 255, 255, 0.16);
@@ -754,8 +841,8 @@ video {
 .footer-legal p {
   margin: 0 0 clamp(10px, 0.72vw, 14px);
   color: rgba(255, 255, 255, 0.46);
-  font-size: clamp(9px, 0.57vw, 11px);
-  line-height: 1.58;
+  font-size: var(--text-11);
+  line-height: var(--lh-17);
 }
 
 .footer-legal strong {
@@ -775,6 +862,14 @@ video {
   display: block;
   width: auto;
   object-fit: contain;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.footer-cert:hover {
+  filter: brightness(1.08);
+  opacity: 0.96;
 }
 
 .footer-cert-profeco {
@@ -825,9 +920,19 @@ summary:focus-visible {
 }
 
 .header-cta:hover,
-.outline-button:hover,
 .store-badge:hover {
   transform: translateY(-1px);
+}
+
+.header-cta:hover,
+.header-cta:focus-visible {
+  background: #0047e8;
+  box-shadow: 0 14px 28px rgba(8, 87, 255, 0.24);
+}
+
+.store-badge:hover,
+.store-badge:focus-visible {
+  filter: drop-shadow(0 13px 28px rgba(0, 0, 0, 0.2));
 }
 
 @media (max-width: 1080px) {
