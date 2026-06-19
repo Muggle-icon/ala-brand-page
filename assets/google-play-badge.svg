@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="46" viewBox="0 0 150 46" role="img" aria-label="Google Play">
+  <rect width="150" height="46" rx="23" fill="#fff"/>
+  <g transform="translate(22 12)">
+    <path d="M1.7 1.1c-.42.44-.67 1.12-.67 2v16.8c0 .88.25 1.56.67 2l10.42-10.42L1.7 1.1Z" fill="#22A6F2"/>
+    <path d="m15.39 8.22-3.27 3.27 3.3 3.3 4.02-2.3c1.29-.74 1.29-1.94 0-2.68l-4.05-2.31Z" fill="#FFD23F"/>
+    <path d="m1.7 1.1 13.69 7.12-3.27 3.27L1.7 1.1Z" fill="#1FC469"/>
+    <path d="m1.7 21.9 13.72-7.11-3.3-3.3L1.7 21.9Z" fill="#F04444"/>
+  </g>
+  <text x="54" y="28" font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#111827">Google Play</text>
+</svg>
