@@ -94,11 +94,9 @@ video {
   height: var(--nav-height);
   width: 100%;
   padding: 0 var(--page-x);
-  background: rgba(255, 255, 255, 0.76);
-  border-bottom: 1px solid rgba(225, 231, 242, 0.58);
-  box-shadow: 0 10px 30px rgba(8, 24, 72, 0.06);
-  backdrop-filter: blur(18px) saturate(1.16);
-  -webkit-backdrop-filter: blur(18px) saturate(1.16);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(225, 231, 242, 0.72);
+  box-shadow: 0 8px 24px rgba(8, 24, 72, 0.04);
   overflow: visible;
 }
 
@@ -173,10 +171,8 @@ video {
   padding: 10px;
   border: 1px solid rgba(221, 228, 242, 0.72);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.9);
+  background: #ffffff;
   box-shadow: 0 22px 62px rgba(7, 23, 72, 0.14);
-  backdrop-filter: blur(18px) saturate(1.16);
-  -webkit-backdrop-filter: blur(18px) saturate(1.16);
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, 8px);
@@ -206,16 +202,23 @@ video {
 
 .nav-panel a:hover,
 .nav-panel a:focus-visible {
-  background: rgba(8, 87, 255, 0.07);
+  background: #f0eee8;
   color: #111827;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .nav-trigger:hover,
-.nav-trigger:focus-visible {
-  background: rgba(8, 87, 255, 0.07);
+.nav-trigger:focus-visible,
+.nav-item:hover .nav-trigger {
+  background: #f0eee8;
   color: #111827;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.nav-item:hover .nav-trigger {
+  box-shadow: inset 0 0 0 1px rgba(20, 20, 19, 0.05);
 }
 
 .nav-link.is-active,
@@ -285,6 +288,15 @@ video {
   height: 100%;
   z-index: 1;
   overflow: hidden;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
 }
 
 .hero-video {
@@ -673,7 +685,15 @@ video {
 
 .faq details {
   border-radius: clamp(8px, 0.625vw, 12px);
-  background: rgba(255, 255, 255, 1);
+  background: #e6eaf2;
+  box-shadow: none;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.faq details[open] {
+  background: #ffffff;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
 }
 
@@ -693,6 +713,11 @@ video {
 
 .faq summary:hover,
 .faq summary:focus-visible {
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.faq details[open] summary:hover,
+.faq details[open] summary:focus-visible {
   background: rgba(8, 87, 255, 0.045);
 }
 
@@ -921,13 +946,13 @@ summary:focus-visible {
 
 .header-cta:hover,
 .store-badge:hover {
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .header-cta:hover,
 .header-cta:focus-visible {
-  background: #0047e8;
-  box-shadow: 0 14px 28px rgba(8, 87, 255, 0.24);
+  background: #111111;
+  box-shadow: 0 14px 32px rgba(17, 17, 17, 0.22);
 }
 
 .store-badge:hover,
