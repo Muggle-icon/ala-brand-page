@@ -288,8 +288,9 @@ video {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(128px, 7.8vw, 150px);
-  height: clamp(40px, 2.4vw, 46px);
+  width: clamp(132px, 8.6vw, 165px);
+  aspect-ratio: 660 / 192;
+  height: auto;
   border-radius: 999px;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.16));
 }
@@ -746,33 +747,26 @@ video {
   align-self: end;
   display: grid;
   justify-items: center;
-  gap: clamp(22px, 1.62vw, 31px);
+  gap: clamp(24px, 1.7vw, 33px);
   padding-bottom: clamp(8px, 0.8vw, 15px);
 }
 
-.cert-badge {
-  display: grid;
-  place-items: center;
-  min-width: clamp(74px, 5.2vw, 100px);
-  min-height: clamp(30px, 2vw, 38px);
-  border-radius: 999px;
-  color: #fff;
-  font-size: clamp(9px, 0.62vw, 12px);
-  font-weight: 700;
-  letter-spacing: 0;
+.footer-cert {
+  display: block;
+  width: auto;
+  object-fit: contain;
 }
 
-.cert-profeco {
-  background: #fff;
-  color: #e55364;
+.footer-cert-ala {
+  width: clamp(82px, 5.8vw, 112px);
 }
 
-.cert-cnbv {
-  background: linear-gradient(90deg, #308e75, #2e628f);
+.footer-cert-cnbv {
+  width: clamp(116px, 8.1vw, 156px);
 }
 
-.cert-condusef {
-  background: linear-gradient(90deg, #6dc24b, #2e86de);
+.footer-cert-condusef {
+  width: clamp(128px, 8.9vw, 172px);
 }
 
 .reveal {
