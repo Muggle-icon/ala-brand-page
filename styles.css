@@ -58,13 +58,16 @@ video {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 40;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   height: var(--nav-height);
+  width: 100%;
   padding: 0 var(--page-x);
   background: rgba(255, 255, 255, 0.76);
   border-bottom: 1px solid rgba(225, 231, 242, 0.58);
@@ -227,7 +230,7 @@ video {
 
 .hero {
   position: relative;
-  height: calc(100vw * 1000 / 1920);
+  height: calc(100vw * 1080 / 1920);
   min-height: 0;
   overflow: hidden;
   background: #f5f7fb;
@@ -247,7 +250,7 @@ video {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center center;
 }
 
@@ -265,7 +268,7 @@ video {
   margin: 0 0 clamp(18px, 1.25vw, 24px);
   font-size: clamp(15px, 1.04vw, 20px);
   line-height: 1.38;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .text-link {
@@ -273,7 +276,7 @@ video {
   margin-bottom: clamp(16px, 1.05vw, 20px);
   color: currentColor;
   font-size: clamp(15px, 0.94vw, 18px);
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -283,6 +286,7 @@ video {
   font-size: clamp(38px, 3.02vw, 58px);
   line-height: 0.95;
   letter-spacing: 0;
+  font-weight: 900;
 }
 
 .store-badges {
