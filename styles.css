@@ -568,6 +568,7 @@ video {
   box-sizing: border-box;
   width: 192px;
   height: 54px;
+  gap: 8px;
   padding: 16px 16px 16px 24px;
   border: 1px solid #0949f5;
   border-radius: 48px;
@@ -582,6 +583,14 @@ video {
   white-space: nowrap;
 }
 
+.outline-button--help {
+  width: 217px;
+}
+
+.outline-button--all-help {
+  width: 192px;
+}
+
 .outline-button:hover,
 .outline-button:focus-visible {
   border-color: #0949f5;
@@ -592,14 +601,11 @@ video {
 
 .outline-button::after {
   content: "";
-  position: absolute;
-  right: 16px;
-  top: 50%;
+  flex: 0 0 auto;
   width: 24px;
   height: 24px;
   background-color: currentColor;
   mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 6L15 12L9 18' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' fill='none'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
-  transform: translateY(-50%);
 }
 
 .phone-frame {
@@ -669,8 +675,8 @@ video {
 .official-card h2 {
   width: min(1580px, 100%);
   margin: 0 0 clamp(18px, 1.25vw, 24px);
-  font-size: var(--text-72);
-  line-height: var(--lh-84);
+  font-size: var(--text-64);
+  line-height: var(--lh-75);
   font-weight: 900;
 }
 
@@ -678,8 +684,8 @@ video {
   width: min(1740px, 100%);
   margin: 0;
   color: rgba(255, 255, 255, 0.6);
-  font-size: var(--text-32);
-  line-height: var(--lh-45);
+  font-size: var(--text-24);
+  line-height: 140%;
   font-weight: 400;
 }
 
@@ -1483,9 +1489,16 @@ summary:focus-visible {
   }
 
   .outline-button {
-    width: 192px;
     height: 54px;
     padding: 16px 16px 16px 24px;
+  }
+
+  .outline-button--help {
+    width: 217px;
+  }
+
+  .outline-button--all-help {
+    width: 192px;
   }
 
   .official-card {
