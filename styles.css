@@ -298,7 +298,7 @@ video {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
 
@@ -571,7 +571,7 @@ video {
 
 .official {
   background: var(--white);
-  height: calc(100vw * 1204 / 1920);
+  height: calc(100vw * 1320 / 1920);
   overflow: hidden;
   padding-top: 0;
   padding-bottom: 0;
