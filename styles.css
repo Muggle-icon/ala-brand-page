@@ -278,7 +278,7 @@ video {
   font-size: var(--text-13);
   line-height: var(--lh-16);
   font-weight: 700;
-  box-shadow: 0 0 0 1px rgba(0, 71, 232, 0.16);
+  box-shadow: none;
 }
 
 .header-cta::after {
@@ -1031,9 +1031,8 @@ summary:focus-visible {
 .header-cta:focus-visible {
   background: var(--blue-strong);
   color: var(--white);
-  box-shadow:
-    0 0 0 2px #ffffff,
-    0 0 0 3px rgba(0, 71, 232, 0.5);
+  outline: none;
+  box-shadow: none;
 }
 
 .store-badge:hover,
@@ -1243,7 +1242,7 @@ summary:focus-visible {
     padding: 0 10px;
     font-size: 9px;
     line-height: 12px;
-    box-shadow: 0 0 0 1px rgba(0, 71, 232, 0.16);
+    box-shadow: none;
   }
 
   .header-cta::after {
