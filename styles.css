@@ -33,6 +33,7 @@
   --lh-26: clamp(20px, 1.3542vw, 26px);
   --lh-28: clamp(22px, 1.4583vw, 28px);
   --lh-29: clamp(23px, 1.5104vw, 29px);
+  --lh-38: clamp(21px, 1.9792vw, 38px);
   --lh-45: clamp(28px, 2.3438vw, 45px);
   --lh-68: clamp(44px, 3.5417vw, 68px);
   --lh-75: clamp(48px, 3.9063vw, 75px);
@@ -504,8 +505,8 @@ video {
 
 .services {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(520px, calc(100vw * 650 / 1920));
-  gap: calc(100vw * 150 / 1920);
+  grid-template-columns: minmax(0, 1fr) minmax(560px, calc(100vw * 720 / 1920));
+  gap: calc(100vw * 120 / 1920);
   align-items: start;
   height: calc(100vw * 1255 / 1920);
   overflow: hidden;
@@ -577,8 +578,10 @@ video {
 }
 
 .phone-frame {
-  justify-self: center;
-  width: min(45vw, calc(100vw * 640 / 1920));
+  justify-self: end;
+  width: min(48vw, calc(100vw * 720 / 1920));
+  margin-top: calc(100vw * -22 / 1920);
+  margin-right: calc(100vw * -12 / 1920);
   filter: drop-shadow(0 34px 44px rgba(31, 60, 110, 0.18));
 }
 
@@ -733,10 +736,13 @@ video {
   min-height: clamp(88px, 6.9792vw, 134px);
   list-style: none;
   padding: 0 clamp(22px, 1.6667vw, 32px);
-  color: #111827;
+  color: #000000;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: var(--text-32);
-  line-height: 1.2;
+  line-height: var(--lh-38);
   font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
   border-radius: inherit;
   transition:
     background-color 0.3s ease,
@@ -1140,7 +1146,10 @@ summary:focus-visible {
   }
 
   .phone-frame {
+    justify-self: center;
     width: min(76vw, 430px);
+    margin-top: 0;
+    margin-right: 0;
   }
 
   .footer-top {
@@ -1385,6 +1394,7 @@ summary:focus-visible {
     justify-self: center;
     width: min(78vw, 300px);
     margin-top: 24px;
+    margin-right: 0;
   }
 
   .outline-button {
