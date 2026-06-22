@@ -508,11 +508,12 @@ video {
   grid-template-columns: minmax(0, 1fr) minmax(560px, calc(100vw * 720 / 1920));
   gap: calc(100vw * 120 / 1920);
   align-items: start;
-  height: calc(100vw * 1255 / 1920);
-  overflow: hidden;
+  min-height: calc(100vw * 1255 / 1920);
+  height: auto;
+  overflow: visible;
   background: #f2f6ff;
   padding-top: calc(100vw * 112 / 1920);
-  padding-bottom: 0;
+  padding-bottom: calc(100vw * 112 / 1920);
 }
 
 .services-copy {
