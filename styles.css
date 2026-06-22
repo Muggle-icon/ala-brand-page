@@ -1136,7 +1136,7 @@ summary:focus-visible {
     order: 2;
     display: flex;
     position: absolute;
-    right: 52px;
+    left: clamp(236px, calc(100vw - 128px), 247px);
     top: 50%;
     transform: translateY(-50%);
     padding: 0;
@@ -1159,7 +1159,7 @@ summary:focus-visible {
   .menu-button {
     order: 3;
     position: absolute;
-    right: 16px;
+    left: clamp(316px, calc(100vw - 44px), 331px);
     top: 50%;
     transform: translateY(-50%);
     width: 28px;
@@ -1203,7 +1203,7 @@ summary:focus-visible {
 
   .hero {
     height: calc(100svh - var(--nav-height));
-    min-height: 620px;
+    min-height: 624px;
   }
 
   .hero-video {
@@ -1211,9 +1211,9 @@ summary:focus-visible {
   }
 
   .hero-content {
-    left: 16px;
-    right: 16px;
-    bottom: 122px;
+    left: 26px;
+    right: 26px;
+    bottom: 142px;
     width: auto;
   }
 
@@ -1222,26 +1222,30 @@ summary:focus-visible {
   }
 
   .text-link {
-    margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 22px;
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
   }
 
   .hero h1 {
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 900;
   }
 
   .store-badges {
-    left: 16px;
+    left: clamp(104px, calc((100vw - 151px) / 2), 112px);
     right: auto;
-    bottom: 36px;
-    flex-direction: row;
-    gap: 10px;
+    bottom: 34px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transform: none;
   }
 
   .store-badge {
-    width: min(150px, calc((100vw - 42px) / 2));
+    width: 151px;
     filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.18));
   }
 
