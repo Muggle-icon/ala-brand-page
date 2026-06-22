@@ -722,27 +722,28 @@ video {
 .faq-list {
   margin: calc(100vw * 58 / 1920) 0 48px;
   display: grid;
-  gap: calc(100vw * 28 / 1920);
+  gap: 12px;
 }
 
 .faq details {
-  border-radius: clamp(8px, 0.625vw, 12px);
-  background: #e6eaf2;
+  border-radius: 16px;
+  background: rgba(64, 64, 64, 0.06);
   box-shadow: none;
+  overflow: hidden;
   transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease;
+    background-color 150ms ease-out,
+    box-shadow 150ms ease-out;
 }
 
 .faq details:not([open]):hover,
 .faq details:not([open]):focus-within {
-  background: #dce2ed;
+  background: rgba(64, 64, 64, 0.1);
 }
 
 .faq details[open] {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(64, 64, 64, 0.08);
   box-shadow: none;
-  padding: clamp(28px, 2.5vw, 48px);
+  padding: 0;
 }
 
 .faq summary {
@@ -750,14 +751,14 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: clamp(88px, 6.9792vw, 134px);
+  min-height: 62px;
   list-style: none;
-  padding: 0 clamp(22px, 1.6667vw, 32px);
-  color: #000000;
+  padding: 20px 24px;
+  color: #141414;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: var(--text-32);
-  line-height: var(--lh-38);
-  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
   letter-spacing: 0;
   text-align: left;
   -webkit-font-smoothing: antialiased;
@@ -785,13 +786,13 @@ video {
 .faq summary::after {
   content: "";
   flex: 0 0 auto;
-  width: 8px;
-  height: 8px;
-  margin-left: 24px;
-  border-right: 1.8px solid #6b7280;
-  border-bottom: 1.8px solid #6b7280;
+  width: 9px;
+  height: 9px;
+  margin-left: 16px;
+  border-right: 3px solid #141414;
+  border-bottom: 3px solid #141414;
   transform: rotate(45deg);
-  transition: transform 180ms ease;
+  transition: transform 180ms ease-out;
 }
 
 .faq details[open] summary::after {
@@ -799,15 +800,16 @@ video {
 }
 
 .faq details[open] summary {
-  min-height: auto;
-  padding: 0;
+  min-height: 62px;
+  padding: 20px 24px;
 }
 
 .faq details p {
-  margin: clamp(28px, 2.5vw, 48px) 0 0;
-  color: #4f596b;
-  font-size: var(--text-24);
-  line-height: 1.4;
+  margin: 0;
+  padding: 0 24px 20px;
+  color: #707070;
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 400;
 }
 
@@ -1535,28 +1537,30 @@ summary:focus-visible {
 
   .faq-list {
     margin: 34px 0 48px;
-    gap: 16px;
+    gap: 12px;
   }
 
   .faq summary {
-    min-height: 58px;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 18px;
+    min-height: 62px;
+    padding: 20px 24px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
   }
 
   .faq details[open] {
-    padding: 20px;
-  }
-
-  .faq details[open] summary {
     padding: 0;
   }
 
+  .faq details[open] summary {
+    padding: 20px 24px;
+  }
+
   .faq details p {
-    margin: 20px 0 0;
-    font-size: 13px;
-    line-height: 140%;
+    margin: 0;
+    padding: 0 24px 20px;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .faq .outline-button {
