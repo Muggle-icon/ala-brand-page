@@ -871,8 +871,8 @@ video {
 }
 
 .footer .footer-wordmark {
-  width: 66px;
-  height: 20px;
+  width: 33px;
+  height: 10px;
   min-width: 0;
   max-width: none;
   object-fit: contain;
@@ -1615,8 +1615,8 @@ summary:focus-visible {
   }
 
   .footer .footer-wordmark {
-    width: 66px;
-    height: 20px;
+    width: 33px;
+    height: 10px;
     min-width: 0;
     max-width: none;
   }
