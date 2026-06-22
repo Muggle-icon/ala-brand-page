@@ -504,8 +504,8 @@ video {
 
 .services {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, calc(100vw * 540 / 1920));
-  gap: calc(100vw * 190 / 1920);
+  grid-template-columns: minmax(0, 1fr) minmax(520px, calc(100vw * 650 / 1920));
+  gap: calc(100vw * 150 / 1920);
   align-items: start;
   height: calc(100vw * 1255 / 1920);
   overflow: hidden;
@@ -578,7 +578,7 @@ video {
 
 .phone-frame {
   justify-self: center;
-  width: min(39vw, calc(100vw * 500 / 1920));
+  width: min(45vw, calc(100vw * 640 / 1920));
   filter: drop-shadow(0 34px 44px rgba(31, 60, 110, 0.18));
 }
 
