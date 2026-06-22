@@ -676,18 +676,21 @@ video {
 
 .proof-grid {
   width: calc(100% - (var(--page-x) * 2));
+  height: calc(100vw * 524 / 1920);
   margin: calc(100vw * 80 / 1920) auto 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 0 calc(100vw * 80 / 1920);
 }
 
 .proof-grid article {
   display: grid;
   grid-template-columns: clamp(44px, 3vw, 58px) 1fr;
+  align-items: center;
   gap: clamp(20px, 2vw, 32px);
-  min-height: clamp(142px, 9.16vw, 176px);
-  padding: clamp(32px, 2.2vw, 42px) 0;
+  min-height: 0;
+  padding: 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1506,6 +1509,7 @@ summary:focus-visible {
 
   .proof-grid {
     width: auto;
+    height: auto;
     margin: 28px 24px 0;
     gap: 0;
   }
