@@ -714,9 +714,15 @@ video {
     box-shadow 0.3s ease;
 }
 
+.faq details:not([open]):hover,
+.faq details:not([open]):focus-within {
+  background: #dce2ed;
+}
+
 .faq details[open] {
-  background: #ffffff;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  padding: clamp(28px, 2.5vw, 48px);
 }
 
 .faq summary {
@@ -724,12 +730,12 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: clamp(72px, 6.25vw, 120px);
+  min-height: clamp(88px, 6.9792vw, 134px);
   list-style: none;
   padding: 0 clamp(22px, 1.6667vw, 32px);
   color: #111827;
-  font-size: var(--text-16);
-  line-height: var(--lh-20);
+  font-size: var(--text-32);
+  line-height: 1.2;
   font-weight: 700;
   border-radius: inherit;
   transition:
@@ -739,12 +745,12 @@ video {
 
 .faq summary:hover,
 .faq summary:focus-visible {
-  background: rgba(255, 255, 255, 0.32);
+  background: transparent;
 }
 
 .faq details[open] summary:hover,
 .faq details[open] summary:focus-visible {
-  background: rgba(8, 87, 255, 0.045);
+  background: transparent;
 }
 
 .faq summary::-webkit-details-marker {
@@ -767,11 +773,16 @@ video {
   transform: rotate(225deg);
 }
 
+.faq details[open] summary {
+  min-height: auto;
+  padding: 0;
+}
+
 .faq details p {
-  margin: -8px 32px 26px;
+  margin: clamp(28px, 2.5vw, 48px) 0 0;
   color: #4f596b;
-  font-size: var(--text-13);
-  line-height: var(--lh-20);
+  font-size: var(--text-24);
+  line-height: 1.4;
   font-weight: 400;
 }
 
@@ -1448,10 +1459,18 @@ summary:focus-visible {
     line-height: 18px;
   }
 
+  .faq details[open] {
+    padding: 20px;
+  }
+
+  .faq details[open] summary {
+    padding: 0;
+  }
+
   .faq details p {
-    margin: -4px 20px 20px;
+    margin: 20px 0 0;
     font-size: 13px;
-    line-height: 19px;
+    line-height: 140%;
   }
 
   .footer {
