@@ -975,6 +975,54 @@ video {
   font-weight: 700;
 }
 
+.footer-contact-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 34px;
+}
+
+.footer-contact {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.footer-contact-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.footer-contact-icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.94;
+}
+
+.footer-contact strong {
+  display: block;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: var(--text-13);
+  line-height: var(--lh-18);
+}
+
+.footer-contact em {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.58);
+  font-style: normal;
+  font-size: var(--text-11);
+  line-height: var(--lh-16);
+}
+
 .footer-certifications {
   align-self: end;
   display: grid;
@@ -1659,6 +1707,450 @@ summary:focus-visible {
 
   .footer-cert-condusef {
     width: 108px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --nav-height: 72px;
+    --page-x: 24px;
+    --text-72: 40px;
+    --lh-84: 46px;
+  }
+
+  main {
+    padding-top: var(--nav-height);
+  }
+
+  .site-header {
+    display: block;
+    height: var(--nav-height);
+    padding: 0 16px;
+    border-bottom: 0;
+    box-shadow: none;
+  }
+
+  .site-header > .brand {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    overflow: hidden;
+    border-radius: 14px;
+    transform: translateY(-50%);
+  }
+
+  .site-header > .brand img {
+    width: auto;
+    height: 56px;
+    max-width: none;
+  }
+
+  .header-actions {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .header-cta {
+    min-width: 112px;
+    min-height: 32px;
+    padding: 0 18px;
+    font-size: 14px;
+    line-height: 18px;
+    box-shadow: none;
+  }
+
+  .header-cta::after {
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+  }
+
+  .menu-button {
+    position: absolute;
+    right: 18px;
+    left: auto;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    background: transparent;
+  }
+
+  .menu-button:hover,
+  .menu-button:focus-visible,
+  .site-header.is-open .menu-button {
+    background: transparent;
+    color: #25272b;
+  }
+
+  .menu-button span {
+    width: 23px;
+    height: 3px;
+    border-radius: 999px;
+  }
+
+  .menu-button span:nth-child(2) {
+    box-shadow: 0 8px 0 currentColor;
+  }
+
+  .site-header.is-open {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: auto;
+    min-height: var(--nav-height);
+    padding-top: 8px;
+  }
+
+  .site-header.is-open > .brand,
+  .site-header.is-open .header-actions,
+  .site-header.is-open .menu-button {
+    position: static;
+    transform: none;
+  }
+
+  .site-header.is-open .site-nav {
+    grid-column: 1 / -1;
+  }
+
+  .hero {
+    height: calc(100svh - var(--nav-height));
+    min-height: 722px;
+  }
+
+  .hero-video {
+    object-fit: cover;
+    transform: translate(-49%, -50%) scale(1.1);
+  }
+
+  .hero-content {
+    left: 24px;
+    right: 24px;
+    bottom: 214px;
+    width: auto;
+  }
+
+  .hero-copy {
+    display: none;
+  }
+
+  .text-link {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 30px;
+    text-underline-offset: 3px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 900;
+  }
+
+  .store-badges {
+    left: 24px;
+    right: 24px;
+    bottom: 47px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .store-badge {
+    width: min(100%, 327px);
+    filter: none;
+  }
+
+  .logo-strip {
+    height: 148px;
+    min-height: 148px;
+  }
+
+  .logo-set {
+    gap: 78px;
+    padding-right: 78px;
+  }
+
+  .logo-track img {
+    max-height: 45px;
+  }
+
+  .section {
+    padding: 56px 24px;
+  }
+
+  .product,
+  .services,
+  .official,
+  .faq,
+  .footer {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .section-heading h2,
+  .faq h2 {
+    margin-bottom: 18px;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .section-heading p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 58px;
+  }
+
+  .info-item {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .info-item img {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+  }
+
+  .info-item span,
+  .info-item strong {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 72px 28px 76px;
+  }
+
+  .services .section-heading {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .services .section-heading h2 {
+    margin-bottom: 22px;
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .services .section-heading p {
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .phone-frame {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    width: min(108vw, 430px);
+    margin: 36px 0 7px;
+  }
+
+  .service-grid {
+    grid-column: 1;
+    grid-row: 3;
+    grid-template-columns: 1fr;
+    gap: 45px;
+    margin: 54px 0;
+  }
+
+  .service-grid article img {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 16px;
+  }
+
+  .service-grid h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .service-grid p {
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .services .outline-button {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: start;
+  }
+
+  .outline-button {
+    width: 217px;
+    height: 54px;
+    justify-content: space-between;
+    padding: 16px 21px 16px 31px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .outline-button--help,
+  .outline-button--all-help {
+    width: 217px;
+  }
+
+  .faq {
+    padding: 134px 24px 126px;
+    background: #f2f6ff;
+  }
+
+  .faq-list {
+    margin: 68px 0 126px;
+    gap: 16px;
+  }
+
+  .faq details {
+    border-radius: 20px;
+    background: rgba(32, 49, 78, 0.07);
+  }
+
+  .faq details[open] {
+    background: #ffffff;
+  }
+
+  .faq summary {
+    min-height: 86px;
+    padding: 24px;
+    font-size: 29px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+
+  .faq details[open] summary {
+    min-height: 0;
+    padding: 24px 48px 12px 24px;
+  }
+
+  .faq details p {
+    padding: 12px 24px 28px;
+    color: #6d6d6d;
+    font-size: 29px;
+    line-height: 39px;
+  }
+
+  .faq .outline-button {
+    width: 217px;
+  }
+
+  .footer {
+    padding: 52px 24px 28px;
+    background: #091866;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand p {
+    width: 100%;
+    margin: 14px 0 36px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .socials img {
+    width: 158px;
+  }
+
+  .footer nav {
+    gap: 11px;
+  }
+
+  .footer h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .footer nav a {
+    font-size: 17px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  .footer-divider {
+    margin: 38px 0 0;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    margin-top: 56px;
+  }
+
+  .footer-legal p {
+    margin-bottom: 11px;
+    color: rgba(255, 255, 255, 0.44);
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .footer-legal strong {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .footer-contact-list {
+    gap: 11px;
+    margin: 10px 0 34px;
+  }
+
+  .footer-contact {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 15px;
+    width: 100%;
+  }
+
+  .footer-contact-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+  }
+
+  .footer-contact strong {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  .footer-contact em {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .footer-certifications {
+    grid-template-columns: repeat(3, auto);
+    justify-items: start;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-cert-profeco {
+    width: 58px;
+  }
+
+  .footer-cert-cnbv {
+    width: 112px;
+  }
+
+  .footer-cert-condusef {
+    width: 132px;
   }
 }
 
