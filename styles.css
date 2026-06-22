@@ -866,7 +866,7 @@ video {
 }
 
 .brand-light img {
-  width: clamp(78px, 5.88vw, 113px);
+  width: 66px;
   height: auto;
 }
 
@@ -1603,7 +1603,7 @@ summary:focus-visible {
   }
 
   .brand-light img {
-    width: 96px;
+    width: 66px;
   }
 
   .footer-brand p {
