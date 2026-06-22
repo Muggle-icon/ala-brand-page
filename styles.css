@@ -209,16 +209,16 @@ video {
 
 .nav-panel a:hover,
 .nav-panel a:focus-visible {
-  background: #f0eee6;
-  color: #141413;
+  background: #eef4ff;
+  color: var(--blue);
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
 .nav-trigger:hover,
 .nav-trigger:focus-visible {
-  background: #f0eee6;
-  color: #141413;
+  background: #eef4ff;
+  color: var(--blue);
 }
 
 .site-nav a:hover,
@@ -233,7 +233,7 @@ video {
 
 .nav-item.is-open > .nav-trigger {
   background: transparent;
-  color: #141413;
+  color: var(--blue);
   box-shadow: none;
 }
 
@@ -549,10 +549,10 @@ video {
 
 .outline-button:hover,
 .outline-button:focus-visible {
-  border-color: #d1cfc5;
+  border-color: #b8d0ff;
   background: #ffffff;
-  color: #141413;
-  box-shadow: 0 0 0 2px #e8e6dc;
+  color: var(--blue);
+  box-shadow: 0 0 0 2px #e7efff;
 }
 
 .outline-button::after {
@@ -1006,8 +1006,8 @@ summary:focus-visible {
   .menu-button:hover,
   .menu-button:focus-visible,
   .site-header.is-open .menu-button {
-    background: #f0eee6;
-    color: #141413;
+    background: #eef4ff;
+    color: var(--blue);
   }
 
   .menu-button span {
