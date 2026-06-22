@@ -29,6 +29,15 @@ const closeNav = () => {
   navTriggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
 };
 
+const openNavItem = (item) => {
+  const trigger = item?.querySelector(".nav-trigger");
+  if (!item || !trigger) return;
+
+  closeNav();
+  item.classList.add("is-open");
+  trigger.setAttribute("aria-expanded", "true");
+};
+
 menuButton?.addEventListener("click", () => {
   const isOpen = header.classList.toggle("is-open");
   menuButton.setAttribute("aria-expanded", String(isOpen));
@@ -42,6 +51,25 @@ navTriggers.forEach((trigger) => {
     closeNav();
     item.classList.toggle("is-open", willOpen);
     trigger.setAttribute("aria-expanded", String(willOpen));
+  });
+});
+
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+navItems.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    if (!finePointer.matches) return;
+    openNavItem(item);
+  });
+
+  item.addEventListener("mouseleave", () => {
+    if (!finePointer.matches) return;
+    closeNav();
+  });
+
+  item.addEventListener("focusin", () => {
+    if (!finePointer.matches) return;
+    openNavItem(item);
   });
 });
 

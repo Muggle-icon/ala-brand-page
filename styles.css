@@ -163,7 +163,9 @@ video {
   transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-item.is-open .nav-trigger::after {
+.nav-item.is-open .nav-trigger::after,
+.nav-item:hover .nav-trigger::after,
+.nav-item:focus-within .nav-trigger::after {
   transform: rotate(225deg) translateY(-1px);
 }
 
@@ -186,7 +188,9 @@ video {
     visibility 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-item.is-open .nav-panel {
+.nav-item.is-open .nav-panel,
+.nav-item:hover .nav-panel,
+.nav-item:focus-within .nav-panel {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, 0);
@@ -232,6 +236,13 @@ video {
 }
 
 .nav-item.is-open > .nav-trigger {
+  background: transparent;
+  color: var(--blue);
+  box-shadow: none;
+}
+
+.nav-item:hover > .nav-trigger,
+.nav-item:focus-within > .nav-trigger {
   background: transparent;
   color: var(--blue);
   box-shadow: none;
