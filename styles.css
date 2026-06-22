@@ -172,7 +172,7 @@ video {
 
 .nav-panel {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(50% + 16px);
   left: 50%;
   z-index: 30;
   min-width: 288px;
@@ -558,6 +558,7 @@ video {
 }
 
 .outline-button {
+  position: relative;
   grid-column: 1;
   grid-row: 3;
   justify-self: start;
@@ -578,6 +579,7 @@ video {
   font-weight: 500;
   letter-spacing: 0;
   text-align: left;
+  white-space: nowrap;
 }
 
 .outline-button:hover,
@@ -590,12 +592,14 @@ video {
 
 .outline-button::after {
   content: "";
-  flex: 0 0 24px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
   width: 24px;
   height: 24px;
-  margin-left: 4px;
   background-color: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 6L6.3805 .380499C6.17036 .170355 5.82964 .170355 5.6195 .380499L0 6' stroke='black' stroke-linecap='round' stroke-width='2' transform='matrix(-1 0 0 1 18 9)' fill='none'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 6L15 12L9 18' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' fill='none'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  transform: translateY(-50%);
 }
 
 .phone-frame {
@@ -697,6 +701,10 @@ video {
   min-height: 0;
   padding: 0;
   border-bottom: 1px solid var(--line);
+}
+
+.proof-grid article:nth-child(-n + 2) {
+  border-top: 1px solid var(--line);
 }
 
 .proof-grid span {
