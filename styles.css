@@ -506,14 +506,15 @@ video {
 .services {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(560px, calc(100vw * 720 / 1920));
-  gap: calc(100vw * 120 / 1920);
+  column-gap: calc(100vw * 80 / 1920);
+  row-gap: 0;
   align-items: start;
-  min-height: 0;
+  min-height: calc(100vw * 1288 / 1920);
   height: auto;
   overflow: visible;
   background: #f2f6ff;
-  padding-top: calc(100vw * 112 / 1920);
-  padding-bottom: calc(100vw * 48 / 1920);
+  padding-top: calc(100vw * 140 / 1920);
+  padding-bottom: calc(100vw * 140 / 1920);
 }
 
 .services-copy {
@@ -528,7 +529,7 @@ video {
 .service-grid {
   grid-column: 1;
   grid-row: 2;
-  margin: calc(100vw * 92 / 1920) 0 calc(100vw * 28 / 1920);
+  margin: calc(100vw * 64 / 1920) 0 calc(100vw * 64 / 1920);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: calc(100vw * 58 / 1920) calc(100vw * 88 / 1920);
