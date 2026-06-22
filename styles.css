@@ -577,10 +577,10 @@ video {
 
 .outline-button:hover,
 .outline-button:focus-visible {
-  border-color: #b8d0ff;
-  background: #ffffff;
+  border-color: #74a4ff;
+  background: rgba(0, 0, 0, 0.05);
   color: var(--blue);
-  box-shadow: 0 0 0 2px #e7efff;
+  box-shadow: none;
 }
 
 .outline-button::after {
@@ -596,9 +596,10 @@ video {
 .phone-frame {
   grid-column: 2;
   grid-row: 1 / span 3;
+  align-self: center;
   justify-self: end;
-  width: min(48vw, calc(100vw * 720 / 1920));
-  margin-top: calc(100vw * -22 / 1920);
+  width: min(52.8vw, calc(100vw * 792 / 1920));
+  margin-top: 0;
   margin-right: calc(100vw * -12 / 1920);
   filter: drop-shadow(0 34px 44px rgba(31, 60, 110, 0.18));
 }
