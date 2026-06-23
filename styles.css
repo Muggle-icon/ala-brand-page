@@ -390,9 +390,9 @@ video {
   border: 0.72px solid rgba(0, 0, 0, 0.2);
   border-radius: 32px;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.16));
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(15px, 1.15vw, 20px);
   line-height: 1;
-  font-weight: 700;
+  font-weight: 500;
   box-sizing: border-box;
 }
 
@@ -1897,7 +1897,7 @@ summary:focus-visible {
     filter: none;
     font-size: 24px;
     line-height: 29px;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .store-badge--google {
