@@ -1451,11 +1451,6 @@ summary:focus-visible {
     filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.18));
   }
 
-  .logo-strip {
-    height: 86px;
-    min-height: 86px;
-  }
-
   .logo-set {
     gap: 58px;
     padding-right: 58px;
@@ -1466,8 +1461,8 @@ summary:focus-visible {
   }
 
   .logo-strip {
-    height: 133px;
-    min-height: 133px;
+    height: 120px;
+    min-height: 120px;
   }
 
   .section {
@@ -2070,17 +2065,17 @@ summary:focus-visible {
   }
 
   .logo-strip {
-    height: 133px;
-    min-height: 133px;
+    height: 120px;
+    min-height: 120px;
   }
 
   .logo-set {
-    gap: 70px;
-    padding-right: 70px;
+    gap: 63px;
+    padding-right: 63px;
   }
 
   .logo-track img {
-    max-height: 41px;
+    max-height: 37px;
   }
 
   .section {
