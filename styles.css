@@ -381,7 +381,7 @@ video {
   position: absolute;
   z-index: 5;
   right: var(--page-x);
-  bottom: clamp(28px, 5.8svh, 74px);
+  bottom: clamp(76px, 8.5svh, 118px);
   display: flex;
   gap: clamp(14px, 0.94vw, 18px);
 }
@@ -802,9 +802,9 @@ video {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 62px;
+  min-height: 86px;
   list-style: none;
-  padding: 20px 24px;
+  padding: 32px 24px;
   color: #141414;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
@@ -851,8 +851,8 @@ video {
 }
 
 .faq details[open] summary {
-  min-height: 62px;
-  padding: 20px 24px;
+  min-height: 86px;
+  padding: 32px 24px;
 }
 
 .faq details p {
@@ -1744,8 +1744,8 @@ summary:focus-visible {
   }
 
   .faq summary {
-    min-height: 62px;
-    padding: 20px 24px;
+    min-height: 86px;
+    padding: 32px 24px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -1756,7 +1756,8 @@ summary:focus-visible {
   }
 
   .faq details[open] summary {
-    padding: 20px 24px;
+    min-height: 86px;
+    padding: 32px 24px;
   }
 
   .faq details p {
@@ -1914,7 +1915,7 @@ summary:focus-visible {
   }
 
   .store-badges {
-    bottom: clamp(20px, 4.8svh, 38px);
+    bottom: clamp(58px, 8svh, 82px);
   }
 
   .store-badge {
@@ -1935,6 +1936,10 @@ summary:focus-visible {
   }
 
   .hero-content {
+    bottom: clamp(54px, 11svh, 70px);
+  }
+
+  .store-badges {
     bottom: clamp(54px, 11svh, 70px);
   }
 }
@@ -2401,16 +2406,16 @@ summary:focus-visible {
   }
 
   .faq summary {
-    min-height: 62px;
-    padding: 20px 24px;
+    min-height: 86px;
+    padding: 32px 24px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
   }
 
   .faq details[open] summary {
-    min-height: 62px;
-    padding: 20px 48px 12px 24px;
+    min-height: 86px;
+    padding: 32px 48px 24px 24px;
   }
 
   .faq details p {
