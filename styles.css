@@ -392,7 +392,7 @@ video {
   justify-content: center;
   width: clamp(170px, 12vw, 220px);
   height: clamp(48px, 3.2vw, 56px);
-  gap: 10px;
+  gap: 6px;
   border: 0.72px solid rgba(0, 0, 0, 0.2);
   border-radius: 32px;
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.16));
@@ -798,13 +798,14 @@ video {
 }
 
 .faq summary {
+  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 86px;
   list-style: none;
-  padding: 32px 24px;
+  padding: 32px 64px 32px 24px;
   color: #141414;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
@@ -836,23 +837,26 @@ video {
 
 .faq summary::after {
   content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
   flex: 0 0 auto;
   width: 24px;
   height: 24px;
-  margin-left: 16px;
+  margin-left: 0;
   background: center / 24px 24px no-repeat
     url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath d='M18 9L12 15L6 9' stroke='rgb(0,0,0)' stroke-opacity='0.6' stroke-linecap='round' stroke-width='2'/%3E%3C/svg%3E");
-  transform: rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
   transition: transform 180ms ease-out;
 }
 
 .faq details[open] summary::after {
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .faq details[open] summary {
   min-height: 86px;
-  padding: 32px 24px;
+  padding: 32px 64px 32px 24px;
 }
 
 .faq details p {
@@ -1745,7 +1749,7 @@ summary:focus-visible {
 
   .faq summary {
     min-height: 86px;
-    padding: 32px 24px;
+    padding: 32px 64px 32px 24px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -1757,7 +1761,7 @@ summary:focus-visible {
 
   .faq details[open] summary {
     min-height: 86px;
-    padding: 32px 24px;
+    padding: 32px 64px 32px 24px;
   }
 
   .faq details p {
@@ -1879,6 +1883,7 @@ summary:focus-visible {
     width: 100%;
     max-width: none;
     height: 58px;
+    gap: 6px;
     filter: none;
     font-size: 20px;
     line-height: 34px;
@@ -1888,7 +1893,7 @@ summary:focus-visible {
   .store-badge-icon {
     width: 32px;
     height: 32px;
-    margin-right: 18px;
+    margin-right: 0;
   }
 }
 
@@ -1921,6 +1926,7 @@ summary:focus-visible {
   .store-badge {
     width: clamp(154px, 11vw, 190px);
     height: clamp(40px, 6.4svh, 48px);
+    gap: 6px;
     font-size: clamp(13px, 1.05vw, 17px);
   }
 
@@ -2132,6 +2138,7 @@ summary:focus-visible {
     width: var(--mobile-store-width);
     max-width: none;
     height: var(--mobile-store-height);
+    gap: 6px;
     border: 0.72px solid rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     box-sizing: border-box;
@@ -2158,7 +2165,7 @@ summary:focus-visible {
   .store-badge-icon {
     width: var(--mobile-store-icon);
     height: var(--mobile-store-icon);
-    margin-right: 18px;
+    margin-right: 0;
   }
 
   .logo-strip {
@@ -2407,7 +2414,7 @@ summary:focus-visible {
 
   .faq summary {
     min-height: 86px;
-    padding: 32px 24px;
+    padding: 32px 64px 32px 24px;
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
@@ -2415,7 +2422,7 @@ summary:focus-visible {
 
   .faq details[open] summary {
     min-height: 86px;
-    padding: 32px 48px 24px 24px;
+    padding: 32px 64px 32px 24px;
   }
 
   .faq details p {
