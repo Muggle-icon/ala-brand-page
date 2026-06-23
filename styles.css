@@ -63,16 +63,21 @@
 }
 
 html {
-  min-width: 375px;
   scroll-behavior: smooth;
 }
 
 body {
-  min-width: 375px;
   margin: 0;
   background: var(--white);
   color: var(--ink);
   overflow-x: auto;
+}
+
+@media (max-width: 374px) {
+  html,
+  body {
+    min-width: 375px;
+  }
 }
 
 main {
@@ -1976,7 +1981,6 @@ summary:focus-visible {
     display: block;
     height: var(--nav-height);
     width: 100%;
-    min-width: 375px;
     padding: 0 16px;
     border-bottom: 0;
     box-shadow: none;
@@ -2028,7 +2032,7 @@ summary:focus-visible {
 
   .menu-button {
     position: absolute;
-    right: 8px;
+    right: 16px;
     left: auto;
     top: var(--mobile-header-y);
     width: 40px;
