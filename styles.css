@@ -606,7 +606,7 @@ video {
 }
 
 .outline-button--all-help {
-  width: 192px;
+  width: 217px;
 }
 
 .outline-button:hover,
@@ -1572,7 +1572,7 @@ summary:focus-visible {
   }
 
   .outline-button--all-help {
-    width: 192px;
+    width: 217px;
   }
 
   .official-card {
@@ -1628,7 +1628,7 @@ summary:focus-visible {
   }
 
   .faq {
-    padding: 56px 24px 140px;
+    padding: 56px 20px 140px;
   }
 
   .faq-list {
@@ -1660,7 +1660,7 @@ summary:focus-visible {
   }
 
   .faq .outline-button {
-    width: 192px;
+    width: 217px;
     height: 54px;
     padding: 16px 16px 16px 24px;
     font-size: 16px;
@@ -2055,7 +2055,7 @@ summary:focus-visible {
   }
 
   .faq {
-    padding: 134px 24px 126px;
+    padding: 134px 20px 126px;
     background: #f2f6ff;
   }
 
