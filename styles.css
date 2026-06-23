@@ -1278,9 +1278,96 @@ summary:focus-visible {
     overflow: hidden;
   }
 
+  .official {
+    padding: 0 0 72px;
+    background: #ffffff;
+  }
+
+  .official-card {
+    height: auto;
+    overflow: visible;
+  }
+
+  .official-card img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(360px, 42vw, 430px);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .official-card::after {
+    display: none;
+  }
+
+  .official-card div {
+    position: static;
+    padding: 40px var(--page-x) 0;
+    color: #0b1020;
+  }
+
+  .official-card h2 {
+    width: 100%;
+    margin: 0 0 28px;
+    color: #000000;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 900;
+  }
+
+  .official-card p {
+    width: 100%;
+    color: #6d6d6d;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .proof-grid {
+    width: auto;
+    height: auto;
+    margin: 48px var(--page-x) 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  .proof-grid article {
+    grid-template-columns: 44px 1fr;
+    gap: 0;
+    min-height: 0;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .proof-grid article:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .proof-grid article:nth-child(n + 2) {
+    border-top: 0;
+  }
+
+  .proof-grid span {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .proof-grid h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .proof-grid p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .info-grid,
   .proof-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .services {
@@ -1480,11 +1567,6 @@ summary:focus-visible {
     overflow: visible;
   }
 
-  .official {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .section-heading h2,
   .faq h2 {
     margin-bottom: 16px;
@@ -1520,7 +1602,7 @@ summary:focus-visible {
   }
 
   .services {
-    padding: 56px 28px 64px;
+    padding: 56px 24px 64px;
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -1648,7 +1730,7 @@ summary:focus-visible {
   }
 
   .faq {
-    padding: 56px 20px 140px;
+    padding: 56px 24px 140px;
   }
 
   .faq-list {
@@ -2136,7 +2218,7 @@ summary:focus-visible {
   .services {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 72px 28px 76px;
+    padding: 72px 24px 76px;
   }
 
   .services .section-heading {
@@ -2208,13 +2290,100 @@ summary:focus-visible {
     width: 217px;
   }
 
+  .official {
+    padding: 0 0 72px;
+    background: #ffffff;
+  }
+
+  .official-card {
+    height: auto;
+    overflow: visible;
+  }
+
+  .official-card img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(265px, 70.67vw, 430px);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .official-card::after {
+    display: none;
+  }
+
+  .official-card div {
+    position: static;
+    padding: 40px 24px 0;
+    color: #0b1020;
+  }
+
+  .official-card h2 {
+    width: 100%;
+    margin: 0 0 28px;
+    color: #000000;
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 900;
+  }
+
+  .official-card p {
+    width: 100%;
+    color: #6d6d6d;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+
+  .proof-grid {
+    width: auto;
+    height: auto;
+    margin: 48px 24px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 0;
+  }
+
+  .proof-grid article {
+    grid-template-columns: 44px 1fr;
+    gap: 0;
+    min-height: 0;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .proof-grid article:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .proof-grid article:nth-child(n + 2) {
+    border-top: 0;
+  }
+
+  .proof-grid span {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .proof-grid h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .proof-grid p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .faq {
-    padding: 134px 20px 126px;
+    padding: 72px 24px 96px;
     background: #f2f6ff;
   }
 
   .faq-list {
-    margin: 68px 0 126px;
+    margin: 48px 0 64px;
     gap: 16px;
   }
 
