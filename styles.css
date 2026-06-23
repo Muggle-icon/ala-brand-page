@@ -518,7 +518,7 @@ video {
   color: #6f7787;
   font-size: var(--text-12);
   line-height: var(--lh-15);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .info-item strong {
@@ -593,9 +593,9 @@ video {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 192px;
+  width: 191px;
   height: 54px;
-  gap: 8px;
+  gap: 0;
   padding: 16px 16px 16px 24px;
   border: 1px solid #0949f5;
   border-radius: 48px;
@@ -604,18 +604,18 @@ video {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 19px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0;
   text-align: left;
   white-space: nowrap;
 }
 
 .outline-button--help {
-  width: 217px;
+  width: 191px;
 }
 
 .outline-button--all-help {
-  width: 217px;
+  width: 191px;
 }
 
 .outline-button:hover,
@@ -916,6 +916,7 @@ video {
   color: rgba(255, 255, 255, 0.74);
   font-size: var(--text-13);
   line-height: var(--lh-20);
+  font-weight: 400;
 }
 
 .socials {
@@ -2293,17 +2294,18 @@ summary:focus-visible {
   }
 
   .outline-button {
-    width: 217px;
+    width: 191px;
     height: 54px;
-    justify-content: space-between;
-    padding: 16px 21px 16px 31px;
+    justify-content: center;
+    gap: 0;
+    padding: 16px 16px 16px 24px;
     font-size: 16px;
     line-height: 19px;
   }
 
   .outline-button--help,
   .outline-button--all-help {
-    width: 217px;
+    width: 191px;
   }
 
   .official {
@@ -2433,7 +2435,7 @@ summary:focus-visible {
   }
 
   .faq .outline-button {
-    width: 217px;
+    width: 191px;
   }
 
   .footer {
