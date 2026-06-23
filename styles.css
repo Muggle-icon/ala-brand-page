@@ -413,7 +413,7 @@ video {
 }
 
 .logo-strip {
-  height: calc(100vw * 250 / 1920);
+  height: calc(100vw * 225 / 1920);
   min-height: 0;
   display: flex;
   align-items: center;
@@ -439,12 +439,12 @@ video {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: clamp(90px, 9.375vw, 180px);
-  padding-right: clamp(90px, 9.375vw, 180px);
+  gap: clamp(81px, 8.4375vw, 162px);
+  padding-right: clamp(81px, 8.4375vw, 162px);
 }
 
 .logo-track img {
-  max-height: clamp(58px, 4.6875vw, 90px);
+  max-height: clamp(52px, 4.21875vw, 81px);
   width: auto;
   object-fit: contain;
   flex: 0 0 auto;
@@ -1017,15 +1017,12 @@ video {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.12);
 }
 
 .footer-contact-icon img {
-  width: 28px;
-  height: 28px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.94;
 }
 
 .footer-contact strong {
@@ -1264,13 +1261,13 @@ summary:focus-visible {
   }
 
   .hero-content {
-    width: min(620px, 56vw);
+    width: min(620px, 43vw);
     bottom: clamp(118px, 17vh, 168px);
   }
 
   .store-badges {
-    left: 5.2vw;
-    right: auto;
+    left: auto;
+    right: var(--page-x);
     bottom: clamp(42px, 8vh, 74px);
   }
 
@@ -1454,17 +1451,22 @@ summary:focus-visible {
   }
 
   .logo-strip {
-    height: 96px;
-    min-height: 96px;
+    height: 86px;
+    min-height: 86px;
   }
 
   .logo-set {
-    gap: 64px;
-    padding-right: 64px;
+    gap: 58px;
+    padding-right: 58px;
   }
 
   .logo-track img {
-    max-height: 48px;
+    max-height: 43px;
+  }
+
+  .logo-strip {
+    height: 133px;
+    min-height: 133px;
   }
 
   .section {
@@ -1749,6 +1751,61 @@ summary:focus-visible {
   }
 }
 
+@media (min-width: 769px) and (max-width: 860px) {
+  .hero {
+    height: calc(100svh - var(--nav-height));
+    min-height: 640px;
+  }
+
+  .hero-content {
+    left: 24px;
+    right: 24px;
+    bottom: 190px;
+    width: auto;
+  }
+
+  .hero-copy {
+    display: none;
+  }
+
+  .text-link {
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 30px;
+    text-underline-offset: 3px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 900;
+  }
+
+  .store-badges {
+    left: 24px;
+    right: 24px;
+    bottom: 48px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .store-badge {
+    width: 100%;
+    max-width: none;
+    height: 58px;
+    filter: none;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .store-badge-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --nav-height: clamp(72px, calc(112px - 5.333vw), 92px);
@@ -1768,7 +1825,8 @@ summary:focus-visible {
     --mobile-copy-bottom: clamp(170px, calc(256px - 11.2vw), 214px);
     --mobile-store-bottom: clamp(47px, calc(38px + 2.4vw), 56px);
     --mobile-store-gap: clamp(12px, calc(18px - 0.8vw), 15px);
-    --mobile-store-width: clamp(327px, calc(296px + 8.267vw), 360px);
+    --mobile-safe-width: max(100vw, 375px);
+    --mobile-store-width: calc(var(--mobile-safe-width) - 48px);
     --mobile-store-height: clamp(56px, calc(52px + 1.067vw), 60px);
     --mobile-store-font: clamp(24px, calc(22px + 0.533vw), 26px);
     --mobile-store-icon: clamp(32px, calc(28px + 1.067vw), 36px);
@@ -1931,7 +1989,7 @@ summary:focus-visible {
 
   .store-badge {
     width: var(--mobile-store-width);
-    max-width: 100%;
+    max-width: none;
     height: var(--mobile-store-height);
     border: 0.72px solid rgba(0, 0, 0, 0.2);
     border-radius: 32px;
@@ -1963,17 +2021,17 @@ summary:focus-visible {
   }
 
   .logo-strip {
-    height: 148px;
-    min-height: 148px;
+    height: 133px;
+    min-height: 133px;
   }
 
   .logo-set {
-    gap: 78px;
-    padding-right: 78px;
+    gap: 70px;
+    padding-right: 70px;
   }
 
   .logo-track img {
-    max-height: 45px;
+    max-height: 41px;
   }
 
   .section {
