@@ -1730,7 +1730,7 @@ summary:focus-visible {
 
 @media (max-width: 768px) {
   :root {
-    --nav-height: 72px;
+    --nav-height: 92px;
     --page-x: 24px;
     --text-72: 40px;
     --lh-84: 46px;
@@ -1753,13 +1753,13 @@ summary:focus-visible {
   .site-header > .brand {
     position: absolute;
     left: 16px;
-    top: 50%;
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
+    top: 68px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
     overflow: hidden;
-    border-radius: 14px;
-    background: url("./assets/ala-app-icon.png") center / 56px 56px no-repeat;
+    border-radius: 7px;
+    background: url("./assets/ala-app-icon.png") center / 28px 28px no-repeat;
     transform: translateY(-50%);
   }
 
@@ -1771,15 +1771,17 @@ summary:focus-visible {
     display: flex;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 68px;
     padding: 0;
     transform: translate(-50%, -50%);
   }
 
   .header-cta {
-    min-width: 112px;
-    min-height: 32px;
-    padding: 0 18px;
+    width: 111px;
+    min-width: 111px;
+    height: 32px;
+    min-height: 0;
+    padding: 0 14px;
     font-size: 14px;
     line-height: 18px;
     box-shadow: none;
@@ -1788,18 +1790,19 @@ summary:focus-visible {
   .header-cta::after {
     width: 7px;
     height: 7px;
-    margin-left: 10px;
+    margin-left: 8px;
   }
 
   .menu-button {
     position: absolute;
-    right: 18px;
+    right: 8px;
     left: auto;
-    top: 50%;
+    top: 68px;
     width: 40px;
     height: 40px;
     transform: translateY(-50%);
     background: transparent;
+    gap: 3px;
   }
 
   .menu-button:hover,
@@ -1810,13 +1813,13 @@ summary:focus-visible {
   }
 
   .menu-button span {
-    width: 23px;
-    height: 3px;
+    width: 18px;
+    height: 2px;
     border-radius: 999px;
   }
 
   .menu-button span:nth-child(2) {
-    box-shadow: 0 8px 0 currentColor;
+    box-shadow: 0 5px 0 currentColor;
   }
 
   .site-header.is-open {
@@ -1840,7 +1843,7 @@ summary:focus-visible {
 
   .hero {
     height: calc(100svh - var(--nav-height));
-    min-height: 722px;
+    min-height: 704px;
   }
 
   .hero-video {
