@@ -632,7 +632,7 @@ video {
   width: 16px;
   height: 16px;
   background-color: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.25 1.75L11.75 8L4.25 14.25' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='3.25' fill='none'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.78143 7.99972L5.48145 4.69975L6.42411 3.75708L10.6668 7.99972L6.42411 12.2424L5.48145 11.2997L8.78143 7.99972Z' fill='black'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
 }
 
 .phone-frame {
