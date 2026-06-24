@@ -585,6 +585,7 @@ video {
 }
 
 .outline-button {
+  --outline-arrow-size: clamp(16px, calc(16px + (100vw - 375px) * 0.00518), 24px);
   position: relative;
   grid-column: 1;
   grid-row: 3;
@@ -629,10 +630,10 @@ video {
 .outline-button::after {
   content: "";
   flex: 0 0 auto;
-  width: 16px;
-  height: 16px;
+  width: var(--outline-arrow-size);
+  height: var(--outline-arrow-size);
   background-color: currentColor;
-  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.78143 7.99972L5.48145 4.69975L6.42411 3.75708L10.6668 7.99972L6.42411 12.2424L5.48145 11.2997L8.78143 7.99972Z' fill='black'/%3E%3C/svg%3E") center / 16px 16px no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.78143 7.99972L5.48145 4.69975L6.42411 3.75708L10.6668 7.99972L6.42411 12.2424L5.48145 11.2997L8.78143 7.99972Z' fill='black'/%3E%3C/svg%3E") center / var(--outline-arrow-size) var(--outline-arrow-size) no-repeat;
 }
 
 .phone-frame {
