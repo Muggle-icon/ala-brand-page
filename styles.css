@@ -591,7 +591,7 @@ video {
   justify-self: start;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-sizing: border-box;
   width: 191px;
   height: 54px;
@@ -633,6 +633,7 @@ video {
   height: 24px;
   background-color: currentColor;
   mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 6L15 12L9 18' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' fill='none'/%3E%3C/svg%3E") center / 24px 24px no-repeat;
+  transform: translateX(9px);
 }
 
 .phone-frame {
@@ -2296,7 +2297,7 @@ summary:focus-visible {
   .outline-button {
     width: 191px;
     height: 54px;
-    justify-content: center;
+    justify-content: space-between;
     gap: 0;
     padding: 16px 16px 16px 24px;
     font-size: 16px;
